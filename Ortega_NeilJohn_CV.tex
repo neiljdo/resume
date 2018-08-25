@@ -1,6 +1,6 @@
 %-------------------------
 % Resume in Latex
-% Author : Sourabh Bajaj
+% Author : Neil John D. Ortega
 % License : MIT
 %------------------------
 
@@ -45,7 +45,7 @@
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+    \textbf{#1}{\\#2 \vspace{1pt}}
   }
 }
 
@@ -82,60 +82,35 @@
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
-
     \resumeSubheading
-      {Google}{Mountain View, CA}
-      {Software Engineer}{Oct 2016 - Present}
+      {Data Scientist}{Nov 2016 --- Present}
+      {Teradata Corporation}{}
       \resumeItemListStart
-        \resumeItem{Tensorflow}
-          {TensorFlow is an open source software library for numerical computation using data flow graphs; primarily used for training deep learning models.}
-        \resumeItem{Apache Beam}
-          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
+        \resumeItem{Survey Response Classification}
+          {AI-based app for automated tagging of free-form customer survey responses with the goal of speeding up market defect discovery. Involved in developing the solution architecture. Wrote backend and frontend code for data ingestion and model results visualization using R, Python, and SQL. Trained and tuned LSTM + word-embedding models for the classification task using Keras with Tensorflow and scikit-learn. Created Docker-based pipeline for the team for efficient deployment to both local and production environments.}
+        \resumeItem{Customer Behavior Modeling}
+          {Hidden Markov model for predicting behavior of telecom subscribers for location-based and time-based targeting. Created parallelized Python pipeline to operationalize the model developed by data scientists. Benchmarked and optimized performance for both Hive data store and Teradata Aster compute engine that reduced end-to-end (E2E) processing time from several days to 2-3 hours.}
+        \resumeItem{Model Monitoring and Maintenance}
+          {Created a Spark / Shiny application that allows users to run a scoring model against datasets in HDFS. Implemented dashboards for visualizing metrics indicating the health of the models. Deployed entire solution via Ansible and Cloudera Manager on the customer's AWS cluster. Solution streamlined the customer's processes and reduced E2E processing time from 1 week to 1 hour.}
+        \resumeItem{Load Demand Forecasting and Disaggregation}
+          {Created an interactive Shiny application with a custom map UI via Leaflet that allows users to visualize both actual and forecasted electrical load demand and disaggregation.}
+        \resumeItem{Real-Time Social Media Discovery}
+          {Real-time sentiment analysis application made using Apache NiFi, Kafka, Spark Streaming and Spark ML (Machine Learning). Implemented both backend, using NodeJS and MongoDB, and frontend using Covalent/Angular and in-house chart widgets.}
+        \resumeItem{Internal Consultant Directory}
+          {Custom internal directory for consultants connected to a recommender system meant for improving resource allocation and management. Wrote the REST API backend in Django and django-rest-framework.}
+        \resumeItem{On-Site Search Improvements}
+          {Integrated pandas and numpy into Flask backend to improve its performance. Updated visualizations written with C3.js and D3.js.}
+        \resumeItem{Plugin Development}
+          {Helped develop an internal reusable R plugin for creating customizable plots and widgets for Shiny applications.}
+        \resumeItem{On-boarding Materials}
+          {Created customized demo and exercise materials for Apache NiFi, Kafka, and Storm, integrating the three into a single streaming dataflow application in a Cloudera environment.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Coursera}{Mountain View, CA}
-      {Senior Software Engineer}{Jan 2014 - Oct 2016}
-      \resumeItemListStart
-        \resumeItem{Notifications}
-          {Service for sending email, push and in-app notifications. Involved in features such as delivery time optimization, tracking, queuing and A/B testing. Built an internal app to run batch campaigns for marketing etc.}
-        \resumeItem{Nostos}
-          {Bulk data processing and injection service from Hadoop to Cassandra and provides a thin REST layer on top for serving offline computed data online.}
-        \resumeItem{Workflows}
-          {Dataduct an open source workflow framework to create and manage data pipelines leveraging reusables patterns to expedite developer productivity.}
-        \resumeItem{Data Collection}
-          {Designed the internal survey and crowd sourcing platform which allowed for creating various tasks for crowd sourcing or embedding surveys across the Coursera platform.}
-        \resumeItem{Dev Environment}
-          {Analytics environment based on docker and AWS, standardized the python and R dependencies. Wrote the core libraries that are shared by all data scientists.}
-        \resumeItem{Data Warehousing}
-          {Setup, schema design and management of Amazon Redshift. Built an internal app for access to the data using a web interface. Dataduct integration for daily ETL injection into Redshift.}
-        \resumeItem{Recommendations}
-          {Core service for all recommendation systems at Coursera, currently used on the homepage and throughout the content discovery process. Worked on both offline training and online serving.}
-        \resumeItem{Content Discovery}
-          {Improved content discovery by building a new onboarding experience on coursera. Using this to personalize the search and browse experience. Also worked on ranking and indexing improvements.}
-        \resumeItem{Course Dashboards}
-          {Instructor dashboards and learner surveying tools, which helped instructors run their class better by providing data on Assignments and Learner Activity.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Lucena Research}{Atlanta, GA}
-      {Data Scientist}{Summer 2012 and 2013}
-      \resumeItemListStart
-        \resumeItem{Portfolio Management}
-          {Created models for portfolio hedging,  portfolio optimization and price forecasting. Also creating a strategy backtesting engine used for simulating and backtesting strategies.}
-        \resumeItem{QuantDesk}
-          {Python backend for a web application used by hedge fund managers for portfolio management.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Georgia Institute of Technology}{Atlanta, GA}
-      {Research and Teaching Assistant}{Jan 2012 - Dec 2013}
-      \resumeItemListStart
-        \resumeItem{Research Assistant - Machine Learning}
-          {Research on machine learning for portfolio hedging and replication algorithms. Modeling low-risk \& continuous-return strategies. Developed the python library QSTK.}
-        \resumeItem{Teaching Assistant - Computational Investing}
-          {The online course on Coursera, had more than 100,000 students enrolled. It was featured on the 11 Alive News and the Atlanta Journal Constitution. Involved in creating assignment, exams and conducting recitation sessions. Also taught the on-campus version of the course.}
-      \resumeItemListEnd
+      {Senior Software Engineer}{Sep 2011 --- Nov 2016}
+      {icannhas Inc.}{}
+      % \resumeItemListStart
+      % \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
