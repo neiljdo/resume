@@ -43,12 +43,6 @@
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{\\#2 \vspace{1pt}}
-  }
-}
-
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -57,29 +51,59 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{\\#2 \vspace{1pt}}
+  }
+}
+
+\newcommand{\resumeItemInline}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItemInline}[2]{\resumeItemInline{#1}{#2}\vspace{-6pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-5pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-%----------HEADING-----------------
+%----------------------------------- HEADING ----------------------------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://www.linkedin.com/in/neiljdo/}{\Large Neil John D. Ortega}} & Email : \href{mailto:neiljohn.ortega@gmail.com}{neiljohn.ortega@gmail.com}\\
-  8 Ligaya St., Brgy. Plainview, Mandaluyong City, Philippines & Mobile : +63-977-185-9549 \\
+  \textbf{\href{https://www.linkedin.com/in/neiljdo/}{\Large Neil John D. Ortega}} & \href{mailto:neiljohn.ortega@gmail.com}{neiljohn.ortega@gmail.com}\\
+  8 Ligaya St., Brgy. Plainview, Mandaluyong City, Philippines & +63-977-185-9549\\
 \end{tabular*}
 
 
-%-----------EXPERIENCE-----------------
+%------------------------------------ TOOLS -----------------------------------
+\section{Tools and Technologies}
+  \resumeSubHeadingListStart
+    \resumeSubItemInline{Machine Learning and Deep Learning}
+      {Keras, Tensorflow, scikit-learn, nltk, pandas, numpy, etc.}
+    \resumeSubItemInline{Big Data}
+      {Spark (including MLlib and Streaming), NiFi, Kafka, Storm, Hive, Hadoop, Cloudera distribution, etc.}
+    \resumeSubItemInline{Web Development and Visualization}
+      {Django, django-rest-framework, Flask, Shiny, AngularJS, D3.js, etc.}
+    \resumeSubItemInline{DevOps}
+      {Docker, Kubernetes, Jenkins, Ansible, AWS.}
+    \resumeSubItemInline{Scripting}
+      {Python, R, SQL, Bash.}
+    \resumeSubItemInline{Collaboration and Project Management}
+      {Git, JIRA, Confluence.}
+  \resumeSubHeadingListEnd
+
+
+%---------------------------------- EXPERINCE ---------------------------------
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
@@ -119,21 +143,7 @@
   \resumeSubHeadingListEnd
 
 
-%-----------PROJECTS-----------------
-% \section{Projects}
-%   \resumeSubHeadingListStart
-%     \resumeSubItem{QuantSoftware Toolkit}
-%       {Open source python library for financial data analysis and machine learning for finance.}
-%     \resumeSubItem{Github Visualization}
-%       {Data Visualization of Git Log data using D3 to analyze project trends over time.}
-%     \resumeSubItem{Recommendation System}
-%       {Music and Movie recommender systems using collaborative filtering on public datasets.}
-%     \resumeSubItem{Mac Setup}
-%       {Book that gives step by step instructions on setting up developer environment on Mac OS.}
-%   \resumeSubHeadingListEnd
-
-
-%-----------EDUCATION-----------------
+%---------------------------------- EDUCATION ---------------------------------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
@@ -154,5 +164,5 @@
 %  \resumeSubHeadingListEnd
 
 
-%-------------------------------------------
+%------------------------------------------------------------------------------
 \end{document}
