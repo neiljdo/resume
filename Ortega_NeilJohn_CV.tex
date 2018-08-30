@@ -53,6 +53,19 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+\newcommand{\resumeSubheadingSubYear}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2
+    \end{tabular*}\vspace{1pt}
+}
+
+\newcommand{\resumeSubSubHeading}[2]{
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textit{\small{#1}} & \small{#2}
+  \end{tabular*}\vspace{-8pt}
+}
+
 \newcommand{\resumeItem}[2]{
   \item\small{
     \textbf{#1}{\\#2 \vspace{1pt}}
@@ -143,7 +156,6 @@
         \resumeItem{Consulting and (Internal) Product R\&D}
           {Worked on multiple web-based applications for both local and international clients. Implemented backend solutions mainly in Python, Django, django-celery, django-rest-framework, etc. Implemented frontend solutions using HTML5, CSS3, JS, and miscellaneous JS frameworks.}
       \resumeItemListEnd
-
   \resumeSubHeadingListEnd
 
 
@@ -156,16 +168,30 @@
   \resumeSubHeadingListEnd
 
 
-%
-%--------PROGRAMMING SKILLS------------
-%\section{Programming Skills}
-%  \resumeSubHeadingListStart
-%    \item{
-%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
-%      \hfill
-%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
-%    }
-%  \resumeSubHeadingListEnd
+%------------------------- ACTIVITIES / ORGANIZATIONS -------------------------
+\section{Activities and Organizations}
+  \resumeSubHeadingListStart
+    \resumeSubheadingSubYear
+      {University of the Philippines Tennis Society}{}
+      \resumeSubSubHeading{Secretary General for Special Events}{2009 --- 2010}
+      \resumeItemListStart
+        \item{Elected by the members as head of committee responsible in teaching tennis to future and current members and in handling the logistics of events.}
+        \item{Spearheaded annual university-wide tournament of the organization. Coordinated with sponsors, org members, and participants for the entire event.}
+      \resumeItemListEnd
+
+      \vspace{6pt}
+      \resumeSubSubHeading{Secretary General for Campaigns and Propaganda}{2008 --- 2009}
+      \resumeItemListStart
+        \item{Elected by the members as head of committee responsible for promoting the organization and its activities and events.}
+      \resumeItemListEnd
+
+    \resumeSubheadingSubYear
+      {University of the Philippines Programming Guild}{}
+      \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textit{\small{Member}} & \small{2009 --- 2010}\\
+        10th Place 2009 ACM-ICPC Asia Manila Regional Contest
+      \end{tabular*}\vspace{-8pt}
+  \resumeSubHeadingListEnd
 
 
 %------------------------------------------------------------------------------
