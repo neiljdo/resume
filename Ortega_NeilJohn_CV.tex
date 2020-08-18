@@ -96,7 +96,7 @@
 %----------------------------------- HEADING ----------------------------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\href{https://www.linkedin.com/in/neiljdo/}{\Large Neil John D. Ortega}} & \href{mailto:neiljohn.ortega@gmail.com}{neiljohn.ortega@gmail.com}\\
-  3105 Amaia Skies, Shaw Blvd., Brgy. Highway Hills, Mandaluyong City, PH 1552 & +63-977-185-9549\\
+  101 Arvense Yoshizuka, 17-45, Yoshizuka 6-Chōme, Hakata-ku, Fukuoka 812-0041 & +81 080-4629-2192\\
 \end{tabular*}
 
 
@@ -104,15 +104,15 @@
 \section{Skiils and Competencies}
   \resumeSubHeadingListStart
     \resumeSubItemInline{Soft Skills}
-      {Strong work ethic, Good communication skills, Leadership and Teamwork skills, Collaborative, Highly adaptable, Problem solver, Critical thinker.}
+      {Strong work ethic, Good communication skills, Leadership and teamwork skills, Collaborative, Highly adaptable, Problem solver, Critical thinker.}
     \resumeSubItemInline{Machine Learning and Deep Learning}
-      {Keras, Tensorflow, scikit-learn, nltk, pandas, numpy, OpenCV, Tesseract, etc.}
+      {PyTorch, fastai, Keras, Tensorflow, scikit-learn, nltk, pandas, numpy, OpenCV, Tesseract, etc.}
     \resumeSubItemInline{Big Data}
-      {Spark (including MLlib and Streaming), NiFi, Kafka, Storm, Hive, Hadoop, Cloudera distribution, etc.}
+      {Spark (including MLlib and Streaming), Airflow, NiFi, Kafka, Storm, Hive, Hadoop, Cloudera distribution, etc.}
     \resumeSubItemInline{Web Development and Visualization}
-      {Django, django-rest-framework, Flask, Shiny, AngularJS, D3.js, etc.}
+      {fastAPI, OpenAPI, Django, django-rest-framework, Flask, Shiny, D3.js, etc.}
     \resumeSubItemInline{DevOps}
-      {Docker, Kubernetes, Jenkins, Ansible, AWS.}
+      {Docker, Kubernetes, Drone, Redis, Jenkins, Ansible, AWS.}
     \resumeSubItemInline{Scripting}
       {Python, R, SQL, Bash.}
     \resumeSubItemInline{Collaboration and Project Management}
@@ -124,7 +124,21 @@
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Data Scientist}{Nov 2016 --- Present}
+    {Machine Learning Engineer}{Sep 2019 --- Present}
+    {LINE Fukuoka Corporation}{}
+    \resumeItemListStart
+      \resumeItem{Detection of High-Profile Individuals from Caricatures}
+        {Internal tool for identifying high-profile individuals from highly-stylized versions of their images. Wrote benchmarking scripts to determine the accuracy of the existing tool. Experimented with an approach based off of WarpGAN paper. Developed API for the final solution. Automated and optimized deployment pipeline. Increased processing speed by 14x using Redis-based optimizations. Implemented Spark, Airflow batch-processing pipeline to increase throughput even further. Created and deployed web-based UI to show detection results.}
+      \resumeItem{Emotion-Based Content Suggestion}
+        {Internal tool for suggesting content based on detected emotion from user photos. Read existing literature on emotion recognition, recommendation systems to design model and solution architectures. Trained baseline models for emotion recognition. Developed API for solution. Automated and optimized deployment pipeline. Automated load testing of API.}
+      \resumeItem{Machine Learning Team Tools}
+        {Miscellaneous internal libraries used by the ML team to make work easier. Added new features to in-house Ansible, Airflow, and Kubernetes-based MLOps tools.}
+      \resumeItem{Knowledge-Sharing Tasks}
+        {Quarterly presentation reviewing existing research, ideas, etc. to the entire ML team. Wrote 3 presentations that focus on meta-learning and model quantization techniques.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Data Scientist}{Nov 2016 --- Sep 2019}
       {Teradata Corporation}{}
       \resumeItemListStart
         \resumeItem{Data Extraction from Scanned Documents}
@@ -134,7 +148,7 @@
         \resumeItem{Customer Behavior Modeling}
           {Hidden Markov model for predicting behavior of telecom subscribers for location-based and time-based targeting. Created parallelized Python pipeline to operationalize the model developed by data scientists. Coordinated with client's Cloudera Cluster administrators in tracking and debugging issues with their infrastructure. Benchmarked and optimized performance for both Hive data store and Teradata Aster compute engine that reduced end-to-end (E2E) processing time from several days to 2-3 hours.}
         \resumeItem{Model Monitoring and Maintenance}
-          {Created a Spark / Shiny application that allows users to run a scoring model against datasets in HDFS. Worked with the client's analytics team to properly scope the project and to determine parts of their workflow to be improved. Implemented dashboards for visualizing metrics indicating the health of the models. Deployed entire solution via Ansible and Cloudera Manager on the customer's AWS cluster. Solution streamlined the customer's processes and reduced E2E processing time from 1 week to 1 hour.}
+          {Created a Spark, Shiny application that allows users to run a scoring model against datasets in HDFS. Worked with the client's analytics team to properly scope the project and to determine parts of their workflow to be improved. Implemented dashboards for visualizing metrics indicating the health of the models. Deployed entire solution via Ansible and Cloudera Manager on the customer's AWS cluster. Solution streamlined the customer's processes and reduced E2E processing time from 1 week to 1 hour.}
         \resumeItem{Load Demand Forecasting and Disaggregation}
           {Created an interactive Shiny application with a custom map UI via Leaflet that allows users to visualize both actual and forecasted electrical load demand and disaggregation. Presented a demo of the solution on-site.}
         \resumeItem{Real-Time Social Media Discovery}
@@ -142,9 +156,9 @@
         \resumeItem{Internal Consultant Directory}
           {Custom internal directory for consultants connected to a recommender system meant for improving resource allocation and management. Wrote the REST API backend in Django and django-rest-framework.}
         \resumeItem{On-Site Search Improvements}
-          {Integrated pandas and numpy into Flask backend to improve its performance. Updated visualizations written with C3.js and D3.js.}
+          {Integrated pandas and numpy into Flask backend to improve performance. Updated visualizations written with C3.js and D3.js.}
         \resumeItem{Plugin Development}
-          {Helped develop an internal reusable R plugin for creating customizable plots and widgets for Shiny applications.}
+          {Developed an internal reusable R plugin for creating customizable plots and widgets for Shiny applications.}
         \resumeItem{On-boarding Materials}
           {Created customized demo and exercise materials for Apache NiFi, Kafka, and Storm, integrating the three into a single streaming dataflow application in a Cloudera environment. Handled training of members from another department.}
       \resumeItemListEnd
