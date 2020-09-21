@@ -129,29 +129,26 @@
     {LINE Fukuoka Corporation}{}
     \resumeItemListStart
       \resumeItem{Detection of High-Profile Individuals from Caricatures}{
-          \item Internal tool for identifying high-profile individuals from highly-stylized versions of their images.
-          \item Wrote benchmarking scripts to determine the accuracy of the existing tool.
-          \item Experimented with an approach based on WarpGAN paper.
-          \item Developed API for the final solution.
-          \item Automated and optimized deployment pipeline.
-          \item Increased processing speed by 14x using Redis-based optimizations.
-          \item Implemented Spark, Airflow batch-processing pipeline to increase throughput even further.
-          \item Created and deployed web-based UI to show detection results.}
+          \item Wrote benchmarking scripts to determine the accuracy of the tool we want to improve.
+          \item Experimented with an approach based on \href{https://arxiv.org/abs/1811.10100}{WarpGAN paper}.
+          \item Implemented Spark, Airflow batch-processing pipeline that handles 1M image/s throughput.
+          \item Developed and deployed APIs for real-time inference and visualization of batch detection results.
+          \item Added service monitoring via Prometheus and Grafana to tighten the feedback loop in detecting target events.
+          \item Wrote the entire deployment pipeline that allowed for faster iteration.}
 
       \resumeItem{Emotion-Based Content Suggestion}{
-        \item Internal tool for suggesting content based on detected emotion from user photos.
-        \item Read existing literature on emotion recognition, recommendation systems to design model and solution architectures.
+        \item Coordinated with product team to scope the requirement.
+        \item Read existing literature on \href{https://arxiv.org/abs/1608.01041}{emotion} \href{https://doi.org/10.3390/s18020401}{recognition}, \href{https://dl.acm.org/doi/10.1145/2959100.2959190}{recommendation} \href{https://arxiv.org/abs/1708.05031}{systems} to design model and solution architectures.
         \item Trained baseline models for emotion recognition.
-        \item Developed API for the solution.
-        \item Automated and optimized deployment pipeline.
-        \item Automated load testing of API.}
+        \item Developed and deployed APIs for real-time inference.
+        \item Implemented service monitoring via Prometheus and Grafana.}
+
       \resumeItem{Machine Learning Team Tools}{
-        \item Miscellaneous internal libraries used by the ML team to make work easier.
         \item Added new features to in-house Ansible, Airflow, and Kubernetes-based MLOps tools.}
+
       \resumeItem{Knowledge-Sharing Tasks}{
-        \item Quarterly presentation reviewing existing research, ideas, etc.
-        \item to the entire ML team.
-        \item Wrote 3 presentations that focus on meta-learning and model quantization techniques.}
+        \item Made two presentations on \href{https://arxiv.org/abs/1606.04474}{meta-learning} \href{https://arxiv.org/abs/2002.09571}{papers} and one on
+         \href{https://bit.ly/3mEIQHN}{model quantization techniques}.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -159,46 +156,38 @@
       {Teradata Corporation}{}
       \resumeItemListStart
         \resumeItem{Data Extraction from Scanned Documents}{
-          \item Pipeline for automatic extraction of desired field values from scanned (images and PDF files) version of documents.
           \item Developed ad-hoc rule-based detection and extraction of field values from documents.
           \item Implemented image preprocessing scripts using OpenCV to improve image input to OCR service.
           \item Wrote scripts using Tesseract and Microsoft OCR to extract information from scanned images.
-          \item Used ML and DL techniques for predicting the location of fields of interest in documents to improve accuracy.}
+          \item Used random forest and CNNs for predicting the location of fields of interest in documents to improve accuracy.}
+
         \resumeItem{Survey Response Classification}{
-          \item AI-based app for automated tagging of free-form customer survey responses to speed up market defect discovery.
-          \item Participated in developing the solution architecture.
-          \item Wrote backend and frontend code for data ingestion and model results visualization using R, Python, and SQL.
-          \item Trained and tuned LSTM + word-embedding models for the classification task using Keras with Tensorflow and scikit-learn.
-          \item Created a Docker-based pipeline for the team for efficient deployment to both local and production environments.
+          \item Collaborated with principal data scientist in developing the solution architecture.
+          \item Created app for data ingestion and model results visualization using R, Python, and SQL that reduced manual labor and errors done by client.
+          \item Trained LSTM + word-embedding models for the classification task using Keras with Tensorflow and scikit-learn.
+          \item Created a Docker pipeline for the team for efficient deployment to both local and production environments.
           \item Acted as a domain expert for technologies the rest of the team are not familiar with.}
+
         \resumeItem{Customer Behavior Modeling}{
-          \item Hidden Markov model for predicting the behavior of telecom subscribers for location-based and time-based targeting.
           \item Created a parallelized Python pipeline to operationalize the model developed by data scientists.
           \item Coordinated with client’s Cloudera Cluster administrators in tracking and debugging issues with their infrastructure.
           \item Benchmarked and optimized performance for both Hive data store and Teradata Aster compute engine that reduced end-to-end (E2E) processing time from several days to 2-3 hours.}
+
         \resumeItem{Model Monitoring and Maintenance}{
           \item Created a Spark, Shiny application that allows users to run a scoring model against datasets in HDFS.
-          \item Worked with the client’s analytics team to properly scope the project and to determine parts of their workflow to be improved.
-          \item Implemented dashboards for visualizing metrics indicating the health of the models.
+          \item Worked with the client’s analytics team to properly scope the project and to determine the pain points of their workflow for improvement.
+          \item Implemented dashboards for visualizing model health metrics.
           \item Deployed the entire solution via Ansible and Cloudera Manager on the customer’s AWS cluster.
           \item Solution streamlined the customer’s processes and reduced E2E processing time from 1 week to 1 hour.}
-        \resumeItem{Load Demand Forecasting and Disaggregation}{
-          \item Created an interactive Shiny application with a custom map UI via Leaflet that allows users to visualize both actual and forecasted electrical load demand and disaggregation.
-          \item Presented the solution on-site.}
+
         \resumeItem{Real-Time Social Media Discovery}{
-          \item Real-time sentiment analysis application made using Apache NiFi, Kafka, Spark Streaming, and SparkML (Machine Learning).
-          \item Implemented both backend and frontend, using NodeJS and MongoDB, and Covalent/Angular and in-house chart widgets, respectively.}
+          \item Created real-time sentiment analysis application made using Apache NiFi, Kafka, Spark Streaming, and SparkML to showcase the capabilities of the Analytics Team in a conference.}
+
         \resumeItem{Internal Consultant Directory}{
-          \item Custom internal directory for consultants connected to a recommender system meant for improving resource allocation and management.
-          \item Wrote the REST API backend in Django and django-rest-framework.}
-        \resumeItem{On-Site Search Improvements}{
-          \item Integrated pandas and numpy into Flask backend to improve search performance.
-          \item Updated C3.js and D3.js-based visualizations.}
-        \resumeItem{Plugin Development}{
-          \item Developed an internal reusable R plugin for creating customizable plots and widgets for Shiny applications.}
+          \item Wrote API for internal directory of consultants connected to a recommender system meant for improving resource allocation and management.}
+
         \resumeItem{On-boarding Materials}{
-          \item Created customized demo and exercise materials for Apache NiFi, Kafka, and Storm, integrating the three into a single streaming dataflow application in a Cloudera environment.
-          \item Handled training of members from another department.}
+          \item Trained members of the ETL team with the basics of Apache NiFi, Kafka, Storm, and Cloudera environment.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -206,11 +195,13 @@
       {icannhas Inc.}{}
       \resumeItemListStart
         \resumeItem{Stock Market Buy-or-Sell Recommender}{
-          \item Machine learning-based approach for predicting stock market trends and recommending buy or sell orders.
           \item Implemented near real-time prediction backend using scikit-learn and Django.
           \item Implemented frontend using plot.ly and ReactJS.}
+
         \resumeItem{Consulting and (Internal) Product R\&D}{
           \item Worked on multiple web-based applications for both local and international clients.
+          \item Coordinated with stakeholders in scoping projects, prioritization of features, etc.
+          \item Coordinated with project team members in budget estimation, scheduling, etc.
           \item Implemented backend solutions mainly in Python, Django, django-celery, django-rest-framework, etc.
           \item Implemented frontend solutions using HTML5, CSS3, JS, and miscellaneous JS frameworks.}
       \resumeItemListEnd
@@ -234,7 +225,7 @@
       \resumeSubSubHeading{Secretary-General for Special Events}{2009 --- 2010}
       \resumeItemListStart
         \item{Headed committee responsible for teaching tennis to future and current members and in handling the logistics of events.}
-        \item{Spearheaded annual university-wide tournament of the organization. Coordinated with sponsors, org members, and participants for the entire event.}
+        \item{Spearheaded annual university-wide tournament hosted by the organization. Lead the entire organization of 50+ members, coordinated with sponsors and participants to ensure the success of the annual event.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
