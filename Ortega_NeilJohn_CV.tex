@@ -1,3 +1,4 @@
+% !TeX spellcheck = en_US
 %-------------------------
 % Resume in Latex
 % Author : Neil John D. Ortega
@@ -16,6 +17,9 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{fontspec}
+\usepackage{fontawesome5}
+\usepackage[english]{babel}
+\usepackage{tabularx}
 
 \setmainfont{Roboto Light}
 
@@ -49,7 +53,7 @@
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small #3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -97,7 +101,7 @@
 %----------------------------------- HEADING ----------------------------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\Large Neil John D. Ortega} & \href{mailto:neiljohn.ortega@gmail.com}{neiljohn.ortega@gmail.com}\\
-  \href{https://linkedin.com/neiljdo}{\underline{linkedin.com/neiljdo}} | \href{https://github.com/neiljdo}{\underline{github.com/neiljdo}} & +81 080-4629-2192\\
+  \href{https://linkedin.com/in/neiljdo}{\faIcon{linkedin}\textnormal{ neiljdo}} | \href{https://github.com/neiljdo}{\faIcon{github}\textnormal{ neiljdo}} & +81-80-4629-2192 \\
 \end{tabular*}
 
 
@@ -105,19 +109,19 @@
 \section{Skills and Competencies}
   \resumeSubHeadingListStart
     \resumeSubItemInline{Soft Skills}
-      {Strong work ethic, Good communication skills, Leadership and teamwork skills, Highly adaptable, Problem solver.}
+      {Strong work ethic, Strong verbal and written communication skills, Leadership and teamwork skills, Highly adaptable, Problem solver.}
     \resumeSubItemInline{Machine Learning and Deep Learning}
-      {PyTorch, fastai, Keras, Tensorflow, scikit-learn, nltk, pandas, numpy, OpenCV, etc.}
+      {AutoGluon, AWS SageMaker, PyTorch, fastai, Keras, Tensorflow, scikit-learn, nltk, pandas, numpy, OpenCV, etc.}
     \resumeSubItemInline{Big Data}
       {Spark, Airflow, Redis, Kafka, Hive, Hadoop, etc.}
-    \resumeSubItemInline{Web Development and Visualization}
-      {fastAPI, OpenAPI, Django, django-rest-framework, Flask, Shiny, D3.js, etc.}
+    \resumeSubItemInline{Full-Stack Development}
+      {fastAPI, OpenAPI, Django, django-rest-framework, Flask, Shiny, D3.js, Front-end frameworks, etc.}
     \resumeSubItemInline{DevOps}
       {Docker, Kubernetes, Drone, Prometheus, Grafana, Jenkins, Ansible, AWS, etc.}
     \resumeSubItemInline{Scripting}
-      {Python, R, SQL, Bash.}
+      {Python, R, SQL, Bash, etc.}
     \resumeSubItemInline{Collaboration and Project Management}
-      {Git, JIRA, Confluence.}
+      {Git, JIRA, Confluence, Agile methodology, Scrum, etc.}
   \resumeSubHeadingListEnd
 
 
@@ -125,86 +129,79 @@
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
-    {Machine Learning Engineer}{Sep 2019 --- Present}
-    {LINE Fukuoka Corporation}{}
+    {Data Scientist}{Nov 2021 --- Present}
+    {AI Cross Inc.}{Tokyo, Japan}
+    \resumeItemListStart
+      \resumeItem{Machine Learning Platform-as-a-Service}{
+        \item Currently designing and implementing the core ML module of the platform that would allow users to train models and retrieve inference results via APIs.}
+      
+      \resumeItem{Business Marketing Platform-as-a-Service}{
+        \item Developed prototype for generating and delivering AI-based recommendations in 1 month, allowing the team to pitch and present to potential clients and validate the value provided by the service.
+        \item Created the system architecture for the product based on the initial prototype.
+        \item Implemented data ingestion, model training, and recommendations generation components of the system, working across the entire stack (frontend, backend, ML module).
+        \item Constantly communicated with the sales team to learn the client feedback and re-prioritize the development milestones accordingly.
+        \item Implemented A/B testing feature that would allow businesses to experiment with their strategies and choose the best option within statistical bounds.
+        \item Took the charge and self-learned about UI/UX to further improve the design of the platform.
+        \item Collaborated with the CTO to create the pipeline for operationalizing the system.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {Machine Learning Engineer}{Sep 2019 --- Nov 2021}
+    {LINE Fukuoka Corporation}{Fukuoka, Japan}
     \resumeItemListStart
       \resumeItem{Detection of High-Profile Individuals from Caricatures}{
-          \item Wrote benchmarking scripts to determine the accuracy of the tool we want to improve.
-          \item Experimented with an approach based on \href{https://arxiv.org/abs/1811.10100}{WarpGAN paper}.
-          \item Implemented Spark, Airflow batch-processing pipeline that handles 1M image/s throughput.
-          \item Developed and deployed APIs for real-time inference and visualization of batch detection results.
-          \item Added service monitoring via Prometheus and Grafana to tighten the feedback loop in detecting target events.
-          \item Wrote the entire deployment pipeline that allowed for faster iteration.}
+        \item Benchmarked the performance of the existing tool we wanted to improve upon using Python scripts.
+        \item Developed a detection approach based on the \href{https://arxiv.org/abs/1811.10100}{WarpGAN paper}.
+        \item Implemented Spark, Airflow batch-processing pipeline that handles 1M image/s throughput.
+        \item Developed and deployed APIs for real-time inference and visualization of batch detection results.
+        \item Added service monitoring via Prometheus and Grafana to tighten the feedback loop in detecting target events.
+        \item Wrote the entire deployment pipeline that allowed for faster iteration.}
 
-      \resumeItem{Emotion-Based Content Suggestion}{
+      \resumeItem{Content Suggestion via Image-Based Emotion Recognition}{
         \item Coordinated with product team to scope the requirement.
-        \item Read existing literature on \href{https://arxiv.org/abs/1608.01041}{emotion} \href{https://doi.org/10.3390/s18020401}{recognition}, \href{https://dl.acm.org/doi/10.1145/2959100.2959190}{recommendation} \href{https://arxiv.org/abs/1708.05031}{systems} to design model and solution architectures.
-        \item Trained baseline models for emotion recognition.
+        \item Designed model and solution architecture based on existing literature on \href{https://arxiv.org/abs/1608.01041}{emotion} \href{https://doi.org/10.3390/s18020401}{recognition}, \href{https://dl.acm.org/doi/10.1145/2959100.2959190}{recommendation} \href{https://arxiv.org/abs/1708.05031}{systems}.
+        \item Trained baseline models for recognizing emotion from input images.
         \item Developed and deployed APIs for real-time inference.
         \item Implemented service monitoring via Prometheus and Grafana.}
 
-      \resumeItem{Machine Learning Team Tools}{
-        \item Added new features to in-house Ansible, Airflow, and Kubernetes-based MLOps tools.}
-
-      \resumeItem{Knowledge-Sharing Tasks}{
-        \item Made two presentations on \href{https://arxiv.org/abs/1606.04474}{meta-learning} \href{https://arxiv.org/abs/2002.09571}{papers} and one on
-         \href{https://bit.ly/3mEIQHN}{model quantization techniques}.}
+      \resumeItem{Machine Learning Tooling and Knowledge-Sharing Tasks}{
+        \item Worked with other members of the ML team to improve existing and/or create new ML/MLOps tools.
+        \item Presented to the team the following areas of interest: meta-learning, \href{https://hackmd.io/@neiljdo/B1tXZUiCI}{model quantization \faIcon{link}}, \href{https://hackmd.io/@neiljdo/ByLImB9-u}{auto-ML \faIcon{link}}, \href{https://hackmd.io/@neiljdo/ByEk4H5WO}{causal inference \faIcon{link}}, \href{https://hackmd.io/@neiljdo/r1cP9fZh5}{secure AI \faIcon{link}}, and \href{https://hackmd.io/@neiljdo/HJ-XtKDzY}{explainable AI \faIcon{link}}.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Data Scientist}{Nov 2016 --- Sep 2019}
-      {Teradata Corporation}{}
+      {Teradata Corporation}{Manila, Philippines}
       \resumeItemListStart
         \resumeItem{Data Extraction from Scanned Documents}{
-          \item Developed ad-hoc rule-based detection and extraction of field values from documents.
-          \item Implemented image preprocessing scripts using OpenCV to improve image input to OCR service.
-          \item Wrote scripts using Tesseract and Microsoft OCR to extract information from scanned images.
-          \item Used random forest and CNNs for predicting the location of fields of interest in documents to improve accuracy.}
+          \item Trained random forest models and CNNs to improve the accuracy of predicting the location of fields of interest in documents.
+          \item Developed ad-hoc scripts for rule-based detection and extraction of field values from documents.
+          \item Improved image input to OCR service using OpenCV image preprocessing scripts.
+          \item Extracted training data from scanned images using Tesseract and Microsoft OCR.}
 
         \resumeItem{Survey Response Classification}{
-          \item Collaborated with principal data scientist in developing the solution architecture.
-          \item Created app for data ingestion and model results visualization using R, Python, and SQL that reduced manual labor and errors done by client.
-          \item Trained LSTM + word-embedding models for the classification task using Keras with Tensorflow and scikit-learn.
-          \item Created a Docker pipeline for the team for efficient deployment to both local and production environments.
-          \item Acted as a domain expert for technologies the rest of the team are not familiar with.}
+          \item Trained LSTM + word-embedding models using Keras with Tensorflow and scikit-learn for the classification of survey responses to easily diagnose problems the end-users are facing.
+          \item Developed the end-to-end (E2E) solution architecture, closely collaborating with principal data scientist.
+          \item Created an app for data ingestion and model results visualization using R, Python, and SQL that reduced manual labor and errors done by client.
+          \item Streamlined both local and production deployment by writing a Docker pipeline.
+          \item Hosted learning sessions for technologies the rest of the team are not familiar with.}
 
         \resumeItem{Customer Behavior Modeling}{
-          \item Created a parallelized Python pipeline to operationalize the model developed by data scientists.
-          \item Coordinated with client’s Cloudera Cluster administrators in tracking and debugging issues with their infrastructure.
-          \item Benchmarked and optimized performance for both Hive data store and Teradata Aster compute engine that reduced end-to-end (E2E) processing time from several days to 2-3 hours.}
+          \item Operationalized the models developed by data scientists via an ad-hoc parallelized Python pipeline.
+          \item Tracked and fixed issues with the client's infrastructure, providing support to the client's Cloudera Cluster administrators.
+          \item Benchmarked and optimized performance for both Hive data store and Teradata Aster compute engine that reduced E2E processing time from several days to 2-3 hours.}
 
         \resumeItem{Model Monitoring and Maintenance}{
-          \item Created a Spark, Shiny application that allows users to run a scoring model against datasets in HDFS.
-          \item Worked with the client’s analytics team to properly scope the project and to determine the pain points of their workflow for improvement.
-          \item Implemented dashboards for visualizing model health metrics.
-          \item Deployed the entire solution via Ansible and Cloudera Manager on the customer’s AWS cluster.
-          \item Solution streamlined the customer’s processes and reduced E2E processing time from 1 week to 1 hour.}
+          \item Created a Spark, Shiny application that allows users to run a scoring model against datasets in HDFS and visualize model health metrics.
+          \item Determined high-value tasks and scoped the project, closely working with the client's analytics team.
+          \item Deployed the entire solution via Ansible and Cloudera Manager on the customer's AWS cluster.
+          \item Solution streamlined the customer's processes and reduced E2E processing time from 1 week to 1 hour.}
 
-        \resumeItem{Real-Time Social Media Discovery}{
-          \item Created real-time sentiment analysis application made using Apache NiFi, Kafka, Spark Streaming, and SparkML to showcase the capabilities of the Analytics Team in a conference.}
-
-        \resumeItem{Internal Consultant Directory}{
-          \item Wrote API for internal directory of consultants connected to a recommender system meant for improving resource allocation and management.}
-
-        \resumeItem{On-boarding Materials}{
-          \item Trained members of the ETL team with the basics of Apache NiFi, Kafka, Storm, and Cloudera environment.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Senior Full-Stack Engineer}{Sep 2011 --- Nov 2016}
-      {icannhas Inc.}{}
-      \resumeItemListStart
-        \resumeItem{Stock Market Buy-or-Sell Recommender}{
-          \item Implemented near real-time prediction backend using scikit-learn and Django.
-          \item Implemented frontend using plot.ly and ReactJS.}
-
-        \resumeItem{Consulting and (Internal) Product R\&D}{
-          \item Worked on multiple web-based applications for both local and international clients.
-          \item Coordinated with stakeholders in scoping projects, prioritization of features, etc.
-          \item Coordinated with project team members in budget estimation, scheduling, etc.
-          \item Implemented backend solutions mainly in Python, Django, django-celery, django-rest-framework, etc.
-          \item Implemented frontend solutions using HTML5, CSS3, JS, and miscellaneous JS frameworks.}
-      \resumeItemListEnd
+      {icannhas Inc.}{Manila, Philippines}
   \resumeSubHeadingListEnd
 
 
@@ -212,22 +209,39 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
+      {Master of Science in Physics}{2021 --- Present}
+      {\vspace{5pt}University of the Philippines Diliman, Quezon City. Expected completion: 2024}{}
+
+    \resumeSubheading
       {Bachelor of Science in Civil Engineering, \textit{magna cum laude}}{2006 --- 2011}
-      {University of the Philippines, Diliman, Quezon City}{}
+      {\vspace{5pt}University of the Philippines Diliman, Quezon City}{}
+      \small Awardee, Engineering Top 100 in Academics, 2011 (out of 5000 students) \\
+      \small 10th Place, ACM International Collegiate Programming Contest Asia Manila Regional Contest, 2009 \\
+      \small Honorable Mention, 37th International Physics Olympiad, 2006
   \resumeSubHeadingListEnd
 
+%---------------------------------- CERTIFICATES ---------------------------------
+\section{Certificates}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {2022 Qiskit Global Summer School on Quantum Simulations}{2022}
+      {\vspace{5pt}Online course. Expected completion: July 29, 2022}{}
+    \resumeSubheading
+      {2021 Qiskit Global Summer School on Quantum Machine Learning}{2021}
+      {\vspace{5pt}Online course.}{}
+  \resumeSubHeadingListEnd
 
 %------------------------- ACTIVITIES / ORGANIZATIONS -------------------------
-\section{Activities and Organizations}
-  \resumeSubHeadingListStart
-    \resumeSubheadingSubYear
-      {University of the Philippines Tennis Society}{}
-      \resumeSubSubHeading{Secretary-General for Special Events}{2009 --- 2010}
-      \resumeItemListStart
-        \item{Headed committee responsible for teaching tennis to future and current members and in handling the logistics of events.}
-        \item{Spearheaded annual university-wide tournament hosted by the organization. Lead the entire organization of 50+ members, coordinated with sponsors and participants to ensure the success of the annual event.}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
+% \section{Activities and Organizations}
+%   \resumeSubHeadingListStart
+%     \resumeSubheadingSubYear
+%       {University of the Philippines Tennis Society}{}
+%       \resumeSubSubHeading{Secretary-General for Special Events}{2009 --- 2010}
+%       \resumeItemListStart
+%         \item{Headed committee responsible for teaching tennis to future and current members and in handling the logistics of events.}
+%         \item{Spearheaded annual university-wide tournament hosted by the organization. Lead the entire organization of 50+ members, coordinated with sponsors and participants to ensure the success of the annual event.}
+%       \resumeItemListEnd
+%   \resumeSubHeadingListEnd
 
 
 %------------------------------------------------------------------------------
