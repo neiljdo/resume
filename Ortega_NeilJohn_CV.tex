@@ -83,15 +83,15 @@
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-\newcommand{\resumeSubItemInline}[2]{\resumeItemInline{#1}{#2}\vspace{-6pt}}
+\newcommand{\resumeSubItemInline}[2]{\resumeItemInline{#1}{#2}\vspace{-4pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{$\bullet$}}$}
 \renewcommand{\labelitemiii}{$\circ$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-3pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
 
 %------------------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -104,26 +104,23 @@
   \href{https://linkedin.com/in/neiljdo}{\faIcon{linkedin} \textnormal{neiljdo}} | \href{https://github.com/neiljdo}{\faIcon{github} \textnormal{neiljdo}} & +44-7429-328264 \\
 \end{tabular*}
 
+%----------------------------- -- PROFILE SUMMARY -----------------------------
+\section{Profile}
+  \small{Senior Machine Learning Engineer with 8+ years of experience building and deploying ML systems at scale across NLP, LLMs, recommender systems, and computer vision. Strong background in LLM fine-tuning, evaluation, and integration into production workflows, with deep expertise in MLOps (AWS, CI/CD, MLFlow). Proven track record of end-to-end ownership from research to deployment, mentoring engineers, and collaborating with researchers to deliver cutting-edge models into real-world systems.}
 
 %--------------------------- SKILLS AND COMPETENCIES --------------------------
 \section{Skills and Competencies}
   \resumeSubHeadingListStart
-    \resumeSubItemInline{Soft Skills}
-      {Strong work ethic, Strong verbal and written communication skills, Leadership and teamwork skills, Highly adaptable, Self-starter, Problem solver.}
-    \resumeSubItemInline{Large Language Models (LLM), Deep Learning (DL), Machine Learning (ML)}
-      {PyTorch, Huggingface Transformers, Accelerate, AutoGluon, AWS SageMaker, fastai, Keras, Tensorflow, scikit-learn, Ax, Optuna, pandas, numpy, spaCy, etc.}
-    \resumeSubItemInline{MLOps, DevOps, CI/CD}
-      {AWS, Azure, Docker, Neptune, MLFlow, Kubernetes, Prometheus, Grafana, Ansible, etc.}
+    \resumeSubItemInline{Large Language Models (LLMs), Deep Learning (DL), Machine Learning (ML)}
+      {Huggingface, Transformers, PyTorch, Accelerate, PEFT, AutoGluon, AWS SageMaker, fastai, Ax, Optuna, spaCy.}
+    \resumeSubItemInline{MLOps and Infrastructure}
+      {MLFlow, Weights \& Biases, LightningAI, Neptune, Docker, Kubernetes, AWS, GCP, Azure, Prometheus, Grafana, Ansible, CI/CD pipelines.}
     \resumeSubItemInline{Data Engineering}
-      {MongoDB, Spark, Airflow, Redis, Kafka, Hive, Hadoop, etc.}
-    \resumeSubItemInline{Full-Stack Development}
-      {fastAPI, OpenAPI, Streamlit, Shiny, D3.js, Test Driven Development (TDD), Front-end frameworks, Back-end frameworks, etc.}
-    \resumeSubItemInline{Scripting}
-      {Python, R, SQL, Bash, etc.}
-    \resumeSubItemInline{Collaboration and Project Management}
-      {Git, JIRA, Confluence, Agile methodology, Scrum, etc.}
-    \resumeSubItemInline{Quantum Computing}
-      {Qiskit, lambeq, Pennylane,  discopy, torchquantum, pytket.}
+      {MongoDB, Spark, Airflow, Redis, Kafka, Hive, Hadoop.}
+    \resumeSubItemInline{Full-Stack Development and Deployment}
+      {fastAPI, OpenAPI, REST APIs, microservices for inference, Streamlit, D3.js, Git, Test Driven Development (TDD), Front-end frameworks, Back-end frameworks.}
+    \resumeSubItemInline{Collaboration and Leadership}
+      {Mentorship, Code reviews, Agile/Scrum, Research-to-production translation.}
   \resumeSubHeadingListEnd
 
 
@@ -134,6 +131,9 @@
     {R\&D Scientist II - Quantum NLP (QNLP)}{Oct 2023 --- Present}
     {Quantinuum Ltd.}{Oxford, United Kingdom}
     \resumeItemListStart
+      \resumeItem{LLM for String Diagram Generation and Rewriting}{
+        \item Created data generation and GRPO-based model finetuning pipelines for training LLMs for generating and rewriting string diagrams.}
+
       \resumeItem{End-to-End Generation of String Diagrams from Sentences}{
         \item Designed, implemented, and trained a custom BERT-based model for converting sentences directly to string diagrams which are the starting point of QNLP \href{https://docs.quantinuum.com/lambeq/pipeline.html}{training pipelines \faIcon{link}}. This removed the grammar-based parsing that often required a large amount of expertise to debug.
         \item Created the dataset used for training the said model and implemented an appropriate data augmentation strategy for the task. This entailed implementing a compact tree-based representation of string diagrams.
@@ -148,28 +148,19 @@
         \item Presented work to other colleagues not necessarily familiar with QNLP.}
 
       \resumeItem{\href{https://docs.quantinuum.com/lambeq/}{lambeq \faIcon{link}} Research and Development}{
-        \item Implemented new features and bug fixes for better usability when training QNLP models.
-        \item Simplified and standardized parts of the API.
-        \item Determined bottlenecks in the pipeline by benchmarking each of its steps, proposed and implemented improvements.
-        \item Performed regular code reviews with the team to enforce best practices.
-        \item Replicated and built upon the results of past research papers for miscellaneous areas of interest.}
+        \item Contributed to the \textbf{lambeq open-source library}, implementing new features and bug fixes, enhancing APIs, and improving efficiency for downstream ML research tasks.
+        \item Mentored interns and conducted code reviews, raising the overall code quality and maintainability of the library.}
     \resumeItemListEnd
 
     \resumeSubheading
-    {Data Scientist}{Nov 2021 --- Sep 2023}
+    {Data Science Engineer}{Nov 2021 --- Sep 2023}
     {AI Cross Inc.}{Tokyo, Japan}
     \resumeItemListStart
-      \resumeItem{\href{https://aicross.co.jp/deep-predictor/}{Machine Learning Platform-as-a-Service \faIcon{link}}}{
-        \item Designed and implemented the core ML module of the platform that allowed users to train models and retrieve inference results via APIs.}
-
-      \resumeItem{\href{https://aicross.co.jp/aix-lab/services/deep-messaging/}{Business Marketing Platform-as-a-Service \faIcon{link}}}{
-        \item Developed prototype for generating and delivering AI-based recommendations in 1 month, which enabled the team to pitch and to present to potential clients, and to validate the value provided by the service.
-        \item Created the system architecture for the product based on the initial prototype.
-        \item Implemented the data ingestion, model training, and recommender components of the system, working across the entire stack (frontend, backend, ML module).
-        \item Constantly communicated with the sales team to understand client needs and re-prioritized the development milestones accordingly.
-        \item Implemented A/B testing feature that allowed clients to experiment with their strategies and choose the best option within statistical bounds.
-        \item Self-learned about UI/UX and implemented changes to the design of the platform.
-        \item Operationalized the system, closely collaborating with our CTO in the process.}
+      \resumeItem{Multiple ML-based Platform-as-a-Service (PaaS) Products}{
+        \item Designed and built a \href{https://aicross.co.jp/deep-predictor/}{ML PaaS product \faIcon{link}} within the AWS ecosystem, enabling customers to \textbf{train and deploy models via APIs} at scale.
+        \item Designed and built a \href{https://aicross.co.jp/aix-lab/services/deep-messaging/}{Business Marketing PaaS product \faIcon{link}} using the AWS ecosystem, allowing customers to \textbf{perform A/B testing and optimize their marketing strategies} with tight integration into their user-facing applications.
+        \item Delivered prototypes for the above services under tight deadlines (1-2 months), directly contributing to product pitches to and adoption by clients.
+        \item Partnered with reseachers, engineers, and product teams to align ML solutions with user needs and fast-track development of new features.}
     \resumeItemListEnd
 
     \resumeSubheading
@@ -177,58 +168,32 @@
     {LINE Fukuoka Corporation}{Fukuoka, Japan}
     \resumeItemListStart
       \resumeItem{Detection of High-Profile Individuals from Caricatures}{
-        \item Benchmarked the existing tool with reusable and configurable Python scripts.
-        \item Developed an image detection pipeline based on the \href{https://arxiv.org/abs/1811.10100}{WarpGAN paper}.
-        \item Implemented Spark, Airflow batch-processing pipeline that handled 1M image/s throughput.
-        \item Developed and deployed APIs for real-time inference and visualization of batch detection results.
-        \item Added service monitoring via Prometheus and Grafana to tighten the feedback loop in detecting target events.
-        \item Wrote the entire CI/CD pipeline that allowed for faster iteration.}
+        \item Developed \textbf{large-scale image recognition pipeline (1M+/s throughput)} based on the \href{https://arxiv.org/abs/1811.10100}{WarpGAN paper} with Spark and Airflow.
+        \item Built \tetxbf{APIs for real-time inference} and visualization of batch detection results; added \textbf{CI/CD pipeline and monitoring} with Prometheus and Grafana.}
 
       \resumeItem{Content Suggestion via Image-Based Emotion Recognition}{
-        \item Coordinated with the product team to scope the requirement.
-        \item Designed the model and solution architecture based on existing literature on \href{https://arxiv.org/abs/1608.01041}{emotion} \href{https://doi.org/10.3390/s18020401}{recognition} and \href{https://dl.acm.org/doi/10.1145/2959100.2959190}{recommendation} \href{https://arxiv.org/abs/1708.05031}{systems}.
-        \item Trained baseline models for recognizing emotion from input images.
-        \item Developed and deployed APIs for real-time inference.
-        \item Implemented service monitoring via Prometheus and Grafana.}
+        \item Collaborated with researchers and product team to design and deploy an \href{https://arxiv.org/abs/1608.01041}{emotion} \href{https://doi.org/10.3390/s18020401}{detection}-based \href{https://dl.acm.org/doi/10.1145/2959100.2959190}{recommendation} \href{https://arxiv.org/abs/1708.05031}{system} as a new feature to the LINE messaging application.}
 
       \resumeItem{Machine Learning Tooling and Knowledge-Sharing Tasks}{
         \item Improved existing and created new ML/MLOps tools with the team.
-        \item Gave presentations on the following areas of interest: meta-learning, \href{https://hackmd.io/@neiljdo/B1tXZUiCI}{model quantization \faIcon{link}}, \href{https://hackmd.io/@neiljdo/ByLImB9-u}{auto-ML \faIcon{link}}, \href{https://hackmd.io/@neiljdo/ByEk4H5WO}{causal inference \faIcon{link}}, \href{https://hackmd.io/@neiljdo/r1cP9fZh5}{secure AI \faIcon{link}}, and \href{https://hackmd.io/@neiljdo/HJ-XtKDzY}{explainable AI \faIcon{link}}.}
+        \item Gave internal talks on the following areas of interest: meta-learning, \href{https://hackmd.io/@neiljdo/B1tXZUiCI}{model quantization \faIcon{link}}, \href{https://hackmd.io/@neiljdo/ByLImB9-u}{auto-ML \faIcon{link}}, \href{https://hackmd.io/@neiljdo/ByEk4H5WO}{causal inference \faIcon{link}}, \href{https://hackmd.io/@neiljdo/r1cP9fZh5}{secure AI \faIcon{link}}, and \href{https://hackmd.io/@neiljdo/HJ-XtKDzY}{explainable AI \faIcon{link}}.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Data Scientist}{Nov 2016 --- Sep 2019}
       {Teradata Corporation}{Manila, Philippines}
       \resumeItemListStart
-        % \resumeItem{Data Extraction from Scanned Documents}{
-        %   \item Trained random forest models and CNNs to improve the accuracy of predicting the location of fields of interest in documents.
-        %   \item Developed ad-hoc scripts for rule-based detection and extraction of field values from documents.
-        %   \item Improved image input to OCR service using OpenCV image preprocessing scripts.
-        %   \item Extracted training data from scanned images using Tesseract and Microsoft OCR.}
-
         \resumeItem{Survey Response Classification}{
-          \item Trained LSTM + word-embedding models using Keras with Tensorflow and scikit-learn for the classification of survey responses to easily diagnose problems the end-users are facing.
-          \item Designed the architecture of the end-to-end (E2E) system with the principal data scientist.
-          \item Developed the app for data ingestion and prediction visualization using R, Python, and SQL that reduced manual labor and errors done by client.
-          \item Wrote a Docker pipeline to streamline both local and production deployment.
-          \item Hosted learning sessions for new technologies for the rest of the team.}
-
-        % \resumeItem{Customer Behavior Modeling}{
-        %   \item Operationalized the models developed by data scientists via an ad-hoc parallelized Python pipeline.
-        %   \item Tracked and fixed issues with the client's infrastructure, providing support to the client's Cloudera Cluster administrators.
-        %   \item Benchmarked and optimized performance for both Hive data store and Teradata Aster compute engine that reduced E2E processing time from several days to 2-3 hours.}
-
-        % \resumeItem{Model Monitoring and Maintenance}{
-        %   \item Created a Spark, Shiny application that allows users to run a scoring model against datasets in HDFS and visualize model health metrics.
-        %   \item Determined high-value tasks and scoped the project, closely working with the client's analytics team.
-        %   \item Deployed the entire solution via Ansible and Cloudera Manager on the customer's AWS cluster.
-        %   \item Solution streamlined the customer's processes and reduced E2E processing time from 1 week to 1 hour.}
-
+          \item Built NLP models (LSTM + embeddings) for \textbf{classification of user responses} for automotive predictive maintenance, improving automation.
+          \item Designed an \textbf{end-to-end ML system} with SQL ingestion pipelines, Dockerized deployments, and visualization apps.
+          \item Conducted knowledge-sharing sessions on ML advances for the wider team.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Senior Full-Stack Engineer}{Sep 2011 --- Nov 2016}
       {icannhas Inc.}{Manila, Philippines}
+      \resumeItemListStart
+        \item Developed scalable full-stack solutions with API-driven architectures and predictive features.
   \resumeSubHeadingListEnd
 
 
@@ -249,21 +214,21 @@
 
 
 %---------------------------------- CERTIFICATES ---------------------------------
-\section{Certificates}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Quantum Natural Language Processing with lambeq (Quantinuum) - Challenge Winner}{2022}
-      {\vspace{5pt} Online global hackathon.}{}
-    \resumeSubheading
-      {Womanium Global Quantum Computing \& Entrepreneurship Program (QSilver and QBronze)}{2022}
-      {\vspace{5pt} Online course.}{}
-    \resumeSubheading
-      {2022 Qiskit Global Summer School on Quantum Simulations}{2022}
-      {\vspace{5pt}Online course.}{}
-    \resumeSubheading
-      {2021 Qiskit Global Summer School on Quantum Machine Learning}{2021}
-      {\vspace{5pt}Online course.}{}
-  \resumeSubHeadingListEnd
+% \section{Certificates}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {Quantum Natural Language Processing with lambeq (Quantinuum) - Challenge Winner}{2022}
+%       {\vspace{5pt} Online global hackathon.}{}
+%     \resumeSubheading
+%       {Womanium Global Quantum Computing \& Entrepreneurship Program (QSilver and QBronze)}{2022}
+%       {\vspace{5pt} Online course.}{}
+%     \resumeSubheading
+%       {2022 Qiskit Global Summer School on Quantum Simulations}{2022}
+%       {\vspace{5pt}Online course.}{}
+%     \resumeSubheading
+%       {2021 Qiskit Global Summer School on Quantum Machine Learning}{2021}
+%       {\vspace{5pt}Online course.}{}
+%   \resumeSubHeadingListEnd
 
 
 %------------------------- ACTIVITIES / ORGANIZATIONS -------------------------
