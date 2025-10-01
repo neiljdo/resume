@@ -108,22 +108,16 @@
 %--------------------------- SKILLS AND COMPETENCIES --------------------------
 \section{Skills and Competencies}
   \resumeSubHeadingListStart
-    \resumeSubItemInline{Soft Skills}
-      {Strong work ethic, Strong verbal and written communication skills, Leadership and teamwork skills, Highly adaptable, Self-starter, Problem solver.}
-    \resumeSubItemInline{Large Language Models (LLM), Deep Learning (DL), Machine Learning (ML)}
-      {PyTorch, Huggingface Transformers, Accelerate, AutoGluon, AWS SageMaker, fastai, Keras, Tensorflow, scikit-learn, Ax, Optuna, pandas, numpy, spaCy, etc.}
+    \resumeSubItemInline{LLMs, DL, \& ML}
+      {PyTorch, Huggingface, Transformers, Accelerate, AWS SageMaker, fastai, Ax, Optuna, scikit-learn, pandas, numpy, spaCy.}
+    \resumeSubItemInline{ML Engineering}
+      {Experimentation, fine-tuning, evaluation pipelines, predictive modeling, scalable deployment.}
     \resumeSubItemInline{MLOps, DevOps, CI/CD}
-      {AWS, Azure, Docker, Neptune, MLFlow, Kubernetes, Prometheus, Grafana, Ansible, etc.}
-    \resumeSubItemInline{Data Engineering}
-      {MongoDB, Spark, Airflow, Redis, Kafka, Hive, Hadoop, etc.}
-    \resumeSubItemInline{Full-Stack Development}
-      {fastAPI, OpenAPI, Streamlit, Shiny, D3.js, Test Driven Development (TDD), Front-end frameworks, Back-end frameworks, etc.}
-    \resumeSubItemInline{Scripting}
-      {Python, R, SQL, Bash, etc.}
-    \resumeSubItemInline{Collaboration and Project Management}
-      {Git, JIRA, Confluence, Agile methodology, Scrum, etc.}
-    \resumeSubItemInline{Quantum Computing}
-      {Qiskit, lambeq, Pennylane,  discopy, torchquantum, pytket.}
+      {MLFlow, Neptune, LightningAI, AWS, GCP, CI/CD pipelines, Docker, Kubernetes, Prometheus, Grafana.}
+    \resumeSubItemInline{Full-Stack Engineering}
+      {FastAPI, OpenAPI, REST APIs, Microservices for inference, Streamlit, D3.js, Test Driven Development (TDD), Front-end frameworks, Back-end frameworks.}
+    \resumeSubItemInline{Collaboration \& Leadership}
+      {Mentorship, Code reviews, Agile/Scrum, Research-to-production translation, Strong verbal and written communication skills, Strong work ethic, Self-starter, Problem solver.}
   \resumeSubHeadingListEnd
 
 
@@ -133,17 +127,22 @@
     \resumeSubheading
     {R\&D Scientist II - Quantum NLP (QNLP)}{Oct 2023 --- Present}
     {Quantinuum Ltd.}{Oxford, United Kingdom}
-    \resumeItemListStart
-      \resumeItem{End-to-End Generation of String Diagrams from Sentences}{
-        \item Designed, implemented, and trained a custom BERT-based model for converting sentences directly to string diagrams which are the starting point of QNLP \href{https://docs.quantinuum.com/lambeq/pipeline.html}{training pipelines \faIcon{link}}. This removed the grammar-based parsing that often required a large amount of expertise to debug.
-        \item Created the dataset used for training the said model and implemented an appropriate data augmentation strategy for the task. This entailed implementing a compact tree-based representation of string diagrams.
-        \item Performed LoRA fine-tuning on the custom model for more efficient training, coupled with automated hyperparameter tuning using Ax. Tracked the experiment results such as metrics and artifacts using both Neptune and MLFlow.
-        \item Mentored interns who worked on this project and worked with them closely so they can contribute to the new features being developed.}
 
-      \resumeItem{DisCoCirc Pipeline Implementation}{
-        \item Helped with an improved implementation of this \href{https://arxiv.org/abs/1904.03478}{paper \faIcon{link}} which described a model for how texts derive meaning from their constituent sentences.
-        \item Created benchmarking datasets to compare the performance of the new pipeline to an \href{https://arxiv.org/abs/2311.17892}{older, different pipeline \faIcon{link}}.
-        \item Wrote reusable, configurable scripts to check the coverage of the new implementation on the dataset. This simplified the testing pipeline and increased the confidence with the new pipeline. Wrote about these resulst in an accompanying preprint.
+    \resumeItemListStart
+      \resumeItem{LLM Fine-tuning for Specialized Reasoning Tasks}{
+        \item Designed and deployed LLM fine-tuning pipelines (SFT+GRPO), utilizing PEFT-techniques and multi-GPU training within the LightningAI platform, to train Qwen2 models for the task of creating and manipulating string diagrams that required formally verifiable steps or Chain-of-Thought (COT) reasoning.
+        \item Worked with senior researchers to translate their domain knowledge in string diagrams and category theory into the synthetic data generation scripts, serialization/deserialization processes, and prompts to create the training and evaluation datasets.
+        \item Designed custom evaluation metrics to measure the performance of the models on the generation and manipulation tasks.}
+
+      \resumeItem{Novel BERT model for End-to-End Generation of String Diagrams from Sentences}{
+        \item Designed, implemented, and trained a custom BERT-based model for converting sentences directly to string diagrams which simplified QNLP \href{https://docs.quantinuum.com/lambeq/pipeline.html}{training pipelines \faIcon{link}}, complete with LoRA fine-tuning and automated hyperparameter tuning using Ax for more efficient training, and experiment and artifact tracking using both Neptune and MLFlow.
+        \item Implemented a compact tree-based representation of string diagrams to create the training and evaluation datasets and an appropriate data augmentation strategy for the task.
+        \item Mentored interns who worked on this project and worked with them closely so they can contribute to the new features being developed, while maintaining good codebase quality for ease of reproducibility, maintainability, and extensibility.}
+
+      \resumeItem{Translation of Theoretical Research to Practical Implementations}{
+        \item Worked with senior researchers on an improved implementation of the \href{https://arxiv.org/abs/1904.03478}{DisCoCirc paper \faIcon{link}} which describes a compositional, non-LLM-based model for how texts derive meaning from their constituent sentences.
+        \item Created benchmarking datasets to compare the performance of the new implementation versus the \href{https://arxiv.org/abs/2311.17892}{original implementation \faIcon{link}}.
+        \item Wrote reusable, configurable scripts to check the coverage of the new implementation on the dataset, which simplified the testing pipeline and increased the confidence with the new pipeline and detailed these results in an accompanying preprint.
         \item Implemented visualization functions to allow inspection of the output circuit diagrams.
         \item Presented work to other colleagues not necessarily familiar with QNLP.}
 
@@ -249,21 +248,21 @@
 
 
 %---------------------------------- CERTIFICATES ---------------------------------
-\section{Certificates}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Quantum Natural Language Processing with lambeq (Quantinuum) - Challenge Winner}{2022}
-      {\vspace{5pt} Online global hackathon.}{}
-    \resumeSubheading
-      {Womanium Global Quantum Computing \& Entrepreneurship Program (QSilver and QBronze)}{2022}
-      {\vspace{5pt} Online course.}{}
-    \resumeSubheading
-      {2022 Qiskit Global Summer School on Quantum Simulations}{2022}
-      {\vspace{5pt}Online course.}{}
-    \resumeSubheading
-      {2021 Qiskit Global Summer School on Quantum Machine Learning}{2021}
-      {\vspace{5pt}Online course.}{}
-  \resumeSubHeadingListEnd
+% \section{Certificates}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {Quantum Natural Language Processing with lambeq (Quantinuum) - Challenge Winner}{2022}
+%       {\vspace{5pt} Online global hackathon.}{}
+%     \resumeSubheading
+%       {Womanium Global Quantum Computing \& Entrepreneurship Program (QSilver and QBronze)}{2022}
+%       {\vspace{5pt} Online course.}{}
+%     \resumeSubheading
+%       {2022 Qiskit Global Summer School on Quantum Simulations}{2022}
+%       {\vspace{5pt}Online course.}{}
+%     \resumeSubheading
+%       {2021 Qiskit Global Summer School on Quantum Machine Learning}{2021}
+%       {\vspace{5pt}Online course.}{}
+%   \resumeSubHeadingListEnd
 
 
 %------------------------- ACTIVITIES / ORGANIZATIONS -------------------------
