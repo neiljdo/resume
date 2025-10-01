@@ -111,7 +111,7 @@
     \resumeSubItemInline{LLMs, DL, \& ML}
       {PyTorch, Huggingface, Transformers, Accelerate, AWS SageMaker, fastai, Ax, Optuna, scikit-learn, pandas, numpy, spaCy.}
     \resumeSubItemInline{ML Engineering}
-      {Experimentation, fine-tuning, evaluation pipelines, predictive modeling, scalable deployment.}
+      {Experimentation, Fine-tuning, Evaluation pipelines, Predictive modeling, Scalable deployment.}
     \resumeSubItemInline{MLOps, DevOps, CI/CD}
       {MLFlow, Neptune, LightningAI, AWS, GCP, CI/CD pipelines, Docker, Kubernetes, Prometheus, Grafana.}
     \resumeSubItemInline{Full-Stack Engineering}
@@ -129,28 +129,26 @@
     {Quantinuum Ltd.}{Oxford, United Kingdom}
 
     \resumeItemListStart
-      \resumeItem{LLM Fine-tuning for Specialized Reasoning Tasks}{
-        \item Designed and deployed LLM fine-tuning pipelines (SFT+GRPO), utilizing PEFT-techniques and multi-GPU training within the LightningAI platform, to train Qwen2 models for the task of creating and manipulating string diagrams that required formally verifiable steps or Chain-of-Thought (COT) reasoning.
-        \item Worked with senior researchers to translate their domain knowledge in string diagrams and category theory into the synthetic data generation scripts, serialization/deserialization processes, and prompts to create the training and evaluation datasets.
-        \item Designed custom evaluation metrics to measure the performance of the models on the generation and manipulation tasks.}
+      \resumeItem{LLM Fine-tuning for Structured Reasoning Tasks}{
+        \item Designed and deployed LLM fine-tuning pipelines (SFT+GRPO), utilizing PEFT and multi-GPU training with unsloth and LightningAI to train Qwen2 models for the task of creating and manipulating string diagrams that required formally verifiable steps or Chain-of-Thought (CoT) reasoning.
+        \item Worked with senior researchers to translate their domain knowledge in string diagrams and category theory into synthetic data generation scripts, serialization/deserialization functons, and instruction prompts for creating the training and evaluation datasets.
+        \item Designed custom evaluation metrics to measure the performance of the trained models.}
 
       \resumeItem{Novel BERT model for End-to-End Generation of String Diagrams from Sentences}{
-        \item Designed, implemented, and trained a custom BERT-based model for converting sentences directly to string diagrams which simplified QNLP \href{https://docs.quantinuum.com/lambeq/pipeline.html}{training pipelines \faIcon{link}}, complete with LoRA fine-tuning and automated hyperparameter tuning using Ax for more efficient training, and experiment and artifact tracking using both Neptune and MLFlow.
-        \item Implemented a compact tree-based representation of string diagrams to create the training and evaluation datasets and an appropriate data augmentation strategy for the task.
-        \item Mentored interns who worked on this project and worked with them closely so they can contribute to the new features being developed, while maintaining good codebase quality for ease of reproducibility, maintainability, and extensibility.}
+        \item Designed, implemented, and trained a custom BERT-based model for converting sentences directly to string diagrams which simplified QNLP \href{https://docs.quantinuum.com/lambeq/pipeline.html}{training pipelines \faIcon{link}}, utilizing LoRA fine-tuning, automated hyperparameter tuning using Ax, and experiment and artifact tracking using both Neptune and MLFlow for more efficiency and reproducibility.
+        \item Created a compact tree-based representation of string diagrams to create the training and evaluation datasets and an appropriate data augmentation strategy for the task.
+        \item Worked closely with interns, allowing them to contribute to the evaluation methods, while maintaining good codebase quality for ease of reproducibility, maintainability, and extensibility.}
 
       \resumeItem{Translation of Theoretical Research to Practical Implementations}{
-        \item Worked with senior researchers on an improved implementation of the \href{https://arxiv.org/abs/1904.03478}{DisCoCirc paper \faIcon{link}} which describes a compositional, non-LLM-based model for how texts derive meaning from their constituent sentences.
-        \item Created benchmarking datasets to compare the performance of the new implementation versus the \href{https://arxiv.org/abs/2311.17892}{original implementation \faIcon{link}}.
-        \item Wrote reusable, configurable scripts to check the coverage of the new implementation on the dataset, which simplified the testing pipeline and increased the confidence with the new pipeline and detailed these results in an accompanying preprint.
+        \item Collaborated with senior researchers on an improved implementation of the \href{https://arxiv.org/abs/1904.03478}{DisCoCirc paper \faIcon{link}} which describes a compositional, non-LLM-based model for how texts derive meaning from their constituent sentences, within a tight timeline of 2 months.
+        \item Created benchmarking datasets to compare the performance of the new implementation versus the \href{https://arxiv.org/abs/2311.17892}{original implementation \faIcon{link}} and wrote reusable, configurable scripts to check the coverage of the new implementation on the dataset which simplified the testing pipeline and increased the confidence with the new pipeline.
         \item Implemented visualization functions to allow inspection of the output circuit diagrams.
         \item Presented work to other colleagues not necessarily familiar with QNLP.}
 
-      \resumeItem{\href{https://docs.quantinuum.com/lambeq/}{lambeq \faIcon{link}} Research and Development}{
+      \resumeItem{\href{https://docs.quantinuum.com/lambeq/}{lambeq \faIcon{link}} Open-Source Library Research and Development}{
         \item Implemented new features and bug fixes for better usability when training QNLP models.
-        \item Simplified and standardized parts of the API.
-        \item Determined bottlenecks in the pipeline by benchmarking each of its steps, proposed and implemented improvements.
-        \item Performed regular code reviews with the team to enforce best practices.
+        \item Streamlined APIs, removed bottlenecks, improved documentation, and created example notebooks to onboard new users.
+        \item Mentored interns and led regular code and PR reviews with the team to enforce best practices.
         \item Replicated and built upon the results of past research papers for miscellaneous areas of interest.}
     \resumeItemListEnd
 
@@ -176,19 +174,12 @@
     {LINE Fukuoka Corporation}{Fukuoka, Japan}
     \resumeItemListStart
       \resumeItem{Detection of High-Profile Individuals from Caricatures}{
-        \item Benchmarked the existing tool with reusable and configurable Python scripts.
-        \item Developed an image detection pipeline based on the \href{https://arxiv.org/abs/1811.10100}{WarpGAN paper}.
-        \item Implemented Spark, Airflow batch-processing pipeline that handled 1M image/s throughput.
-        \item Developed and deployed APIs for real-time inference and visualization of batch detection results.
-        \item Added service monitoring via Prometheus and Grafana to tighten the feedback loop in detecting target events.
-        \item Wrote the entire CI/CD pipeline that allowed for faster iteration.}
+        \item Built a high-throughput (1M+/sec) image recognition pipeline based on the \href{https://arxiv.org/abs/1811.10100}{WarpGAN paper} using Spark and Airflow.
+        \item Developed and deployed APIs for real-time inference and visualization of batch detection results with service monitoring via Prometheus and Grafana to tighten the feedback loop in detecting target events and implemented CI/CD pipelines for reliable deployment.}
 
       \resumeItem{Content Suggestion via Image-Based Emotion Recognition}{
-        \item Coordinated with the product team to scope the requirement.
-        \item Designed the model and solution architecture based on existing literature on \href{https://arxiv.org/abs/1608.01041}{emotion} \href{https://doi.org/10.3390/s18020401}{recognition} and \href{https://dl.acm.org/doi/10.1145/2959100.2959190}{recommendation} \href{https://arxiv.org/abs/1708.05031}{systems}.
-        \item Trained baseline models for recognizing emotion from input images.
-        \item Developed and deployed APIs for real-time inference.
-        \item Implemented service monitoring via Prometheus and Grafana.}
+        \item Designed the model and system architecture for a new \href{https://arxiv.org/abs/1608.01041}{emotion} \href{https://doi.org/10.3390/s18020401}{recognition}-based \href{https://dl.acm.org/doi/10.1145/2959100.2959190}{recommendation} \href{https://arxiv.org/abs/1708.05031}{system} feature to the LINE messaging app, collaborating closely with the product team.
+        \item Developed and deployed APIs for real-time inference complete with service monitoring via Prometheus and Grafana.}
 
       \resumeItem{Machine Learning Tooling and Knowledge-Sharing Tasks}{
         \item Improved existing and created new ML/MLOps tools with the team.
@@ -199,30 +190,10 @@
       {Data Scientist}{Nov 2016 --- Sep 2019}
       {Teradata Corporation}{Manila, Philippines}
       \resumeItemListStart
-        % \resumeItem{Data Extraction from Scanned Documents}{
-        %   \item Trained random forest models and CNNs to improve the accuracy of predicting the location of fields of interest in documents.
-        %   \item Developed ad-hoc scripts for rule-based detection and extraction of field values from documents.
-        %   \item Improved image input to OCR service using OpenCV image preprocessing scripts.
-        %   \item Extracted training data from scanned images using Tesseract and Microsoft OCR.}
-
         \resumeItem{Survey Response Classification}{
-          \item Trained LSTM + word-embedding models using Keras with Tensorflow and scikit-learn for the classification of survey responses to easily diagnose problems the end-users are facing.
-          \item Designed the architecture of the end-to-end (E2E) system with the principal data scientist.
-          \item Developed the app for data ingestion and prediction visualization using R, Python, and SQL that reduced manual labor and errors done by client.
-          \item Wrote a Docker pipeline to streamline both local and production deployment.
-          \item Hosted learning sessions for new technologies for the rest of the team.}
-
-        % \resumeItem{Customer Behavior Modeling}{
-        %   \item Operationalized the models developed by data scientists via an ad-hoc parallelized Python pipeline.
-        %   \item Tracked and fixed issues with the client's infrastructure, providing support to the client's Cloudera Cluster administrators.
-        %   \item Benchmarked and optimized performance for both Hive data store and Teradata Aster compute engine that reduced E2E processing time from several days to 2-3 hours.}
-
-        % \resumeItem{Model Monitoring and Maintenance}{
-        %   \item Created a Spark, Shiny application that allows users to run a scoring model against datasets in HDFS and visualize model health metrics.
-        %   \item Determined high-value tasks and scoped the project, closely working with the client's analytics team.
-        %   \item Deployed the entire solution via Ansible and Cloudera Manager on the customer's AWS cluster.
-        %   \item Solution streamlined the customer's processes and reduced E2E processing time from 1 week to 1 hour.}
-
+          \item Developed NLP models (LSTM + embedding) using Keras with Tensorflow and scikit-learn for the classification of survey responses, improving automation.
+          \item Designed end-to-end (E2E) pipelines with SQL ingestion, Dockerized deployment, and prediction visualization that reduced manual labor and errors made by client.
+          \item Led knowledge-sharing sessions for new technologies for the rest of the team.}
       \resumeItemListEnd
 
     \resumeSubheading
